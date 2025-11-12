@@ -1,8 +1,9 @@
-# Utiliser l'image officielle n8n comme base
+# Utiliser l'image officielle n8n
 FROM n8nio/n8n:latest
 
-# Exposer le port par défaut de n8n
+# Exposer le port par défaut
 EXPOSE 5678
 
-# Démarrer n8n
-CMD ["n8n", "start"]
+# Définir la commande par défaut pour lancer n8n
+ENTRYPOINT ["n8n", "start"]
+
